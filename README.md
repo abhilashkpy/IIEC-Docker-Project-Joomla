@@ -20,7 +20,7 @@ A Docker image is a static snapshot of a container which is used to create new c
 
 PROJECT OBJECTIVE
 ------------------
-Confiruration of Joomla server and mySQL server on Docker containers and connecting between them.
+Configuration of Joomla server and mySQL server on Docker containers and connecting between them.
 
 PREREQUISITES:
 -----------------
