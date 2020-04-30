@@ -65,7 +65,7 @@ STEP 9: Enter the source code
 
 STEP 10: Run the docker-compose file: docker-compose up
 
-STEP 11: Inpect the Joomla container using its container ID:
+STEP 11: Inspect the Joomla container using its container ID:
 docker inspect [CONTAINER ID]
 
 STEP 12: Get the IP address of Joomla container.
