@@ -54,10 +54,10 @@ docker pull mysql:5.6
 STEP 6: To see all docker images:
 docker images
 
-STEP 7: Create a directory named ìjoomlaî in the root folder:
+STEP 7: Create a directory named ‚Äújoomla‚Äù in the root folder:
 mkdir joomla
 
-STEP 8: Create a file named ìdocker-compose.ymlî inside the ìjoomlaî directory.
+STEP 8: Create a file named ‚Äúdocker-compose.yml‚Äù inside the ‚Äújoomla‚Äù directory.
 cd joomla
 vim docker-compose.yml
 
