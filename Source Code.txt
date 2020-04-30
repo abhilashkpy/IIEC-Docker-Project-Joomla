@@ -1,0 +1,41 @@
+version: '2'
+
+services:
+           joomla102:
+                  image: joomla
+                  restart: always
+                  volumes:
+                          - joomla_storage:/var/www/html
+                  ports:
+                           - 8092:80
+                  depends_on:
+                           - mysql101
+                  environment:
+                          JOOMLA_DB_HOST: mysql101
+                          JOOMLA_DB_PASSWORD: abhilash
+
+         
+           mysql101:
+                   image: mysql:5.6
+                   volumes:
+                          -mysql_storage:/var/lib/mysql
+                   restart: always
+                   environment:
+                           MYSQL_ROOT_PASSWORD: rootpass
+                           MYSQL_USER: abhilash
+                           MYSQL_PASSWORD: abhilash
+                           MYSQL_DATABASE: mydb1
+
+           phpmyadmin:
+                  image: phpmyadmin/phpmyadmin
+                  depends_on:
+                           - mysql101
+                  environment:
+                             - PMA_ARBITRARY=1
+                  restart: always
+                  volumes:
+                           - /sessions
+
+  volumes: 
+         mysql_storage:
+         joomla_storage:
